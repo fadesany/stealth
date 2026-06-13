@@ -1,5 +1,14 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { Sparkles, Calendar, Paperclip, User, ArrowUpRight, Send } from "lucide-react";
+import {
+  ArrowUpRight,
+  Calendar,
+  Paperclip,
+  Send,
+  Sparkles,
+  User,
+  type LucideIcon,
+} from "lucide-react";
 import type { Email } from "./data";
 
 export function RightPanel({ email, onShowToast }: { email: Email | null; onShowToast: (message: string) => void }) {
