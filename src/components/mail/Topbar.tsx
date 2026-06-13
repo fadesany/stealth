@@ -172,20 +172,20 @@ export function Topbar({
                       Filters
                     </div>
 
-                  <FilterToggle
-                    icon={Check}
-                    label="Unread only"
-                    checked={filters.unreadOnly}
-                    onChange={(v) => setFilters({ ...filters, unreadOnly: v })}
-                  />
-                  <FilterToggle
-                    icon={Paperclip}
-                    label="Has attachments"
-                    checked={filters.hasAttachments}
-                    onChange={(v) => setFilters({ ...filters, hasAttachments: v })}
-                  />
+                    <FilterToggle
+                      icon={Check}
+                      label="Unread only"
+                      checked={filters.unreadOnly}
+                      onChange={(v) => onFiltersChange({ ...filters, unreadOnly: v })}
+                    />
+                    <FilterToggle
+                      icon={Paperclip}
+                      label="Has attachments"
+                      checked={filters.hasAttachments}
+                      onChange={(v) => onFiltersChange({ ...filters, hasAttachments: v })}
+                    />
 
-                  <div className="my-2 border-t border-white/5" />
+                    <div className="my-2 border-t border-white/5" />
 
                   <div className="mb-2 px-2 text-[10px] font-medium uppercase tracking-wider text-muted-foreground">
                     Date range
