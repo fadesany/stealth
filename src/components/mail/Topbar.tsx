@@ -69,10 +69,12 @@ export function Topbar({
     if (filterOpen && filterRef.current) setFilterRect(filterRef.current.getBoundingClientRect());
   }, [filterOpen]);
   useLayoutEffect(() => {
-    if (accountOpen && accountRef.current) setAccountRect(accountRef.current.getBoundingClientRect());
+    if (accountOpen && accountRef.current)
+      setAccountRect(accountRef.current.getBoundingClientRect());
   }, [accountOpen]);
   useLayoutEffect(() => {
-    if (notificationsOpen && notificationsRef.current) setNotifRect(notificationsRef.current.getBoundingClientRect());
+    if (notificationsOpen && notificationsRef.current)
+      setNotifRect(notificationsRef.current.getBoundingClientRect());
   }, [notificationsOpen]);
 
   useEffect(() => {
