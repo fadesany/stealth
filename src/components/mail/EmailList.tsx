@@ -76,15 +76,7 @@ export function EmailList({
         </div>
       </div>
 
-      <ul
-        className="scrollbar-thin relative z-10 flex-1 overflow-y-auto"
-        style={{
-          padding: "var(--mail-list-padding)",
-          display: "grid",
-          alignContent: "start",
-          gap: "var(--mail-list-gap)",
-        }}
-      >
+      <ul className="scrollbar-thin relative z-10 flex-1 space-y-2 overflow-y-auto p-2.5">
         {filtered.length === 0 && (
           <li className="px-3 py-10 text-center text-xs text-muted-foreground">
             No conversations in {folderLabel.toLowerCase()} yet.
@@ -108,7 +100,7 @@ export function EmailList({
                   active
                     ? "-translate-y-px border-white/15 bg-[oklch(0.38_0.007_270/0.55)] py-2 shadow-[0_18px_42px_oklch(0_0_0/0.35),0_0_0_1px_oklch(1_0_0/0.07),inset_0_1px_0_oklch(1_0_0/0.14)]"
                     : compact
-                      ? "py-1.5"
+                      ? "py-2"
                       : "py-2.5",
                 )}
               >
@@ -163,11 +155,6 @@ export function EmailList({
                   >
                     {e.subject}
                   </div>
-                  {!compact && (
-                    <p className="mt-1 line-clamp-2 text-[10.5px] leading-4 text-muted-foreground/75">
-                      {e.preview}
-                    </p>
-                  )}
                 </div>
               </motion.button>
             </motion.li>
